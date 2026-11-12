@@ -1,0 +1,234 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="RAD Unique Design in Navalur, Chennai. Explore bridal designs, mehndi, decorations and creative designs. Contact us on WhatsApp.">
+  <title>RAD Unique Design | Premium Designs in Chennai</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">RAD</span>
+      <span class="brand-name">UNIQUE DESIGN<small>CREATIVITY WITH ELEGANCE</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+      <button class="admin-link" id="openAdmin">Admin</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <span class="eyebrow">WELCOME TO RAD UNIQUE DESIGN</span>
+        <h1>Beautiful Designs.<br><span>Unforgettable Moments.</span></h1>
+        <p>Creative designs made with care, detail and elegance. Explore our work and tell us what you have in mind.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#gallery">Explore Gallery</a>
+          <a class="btn btn-outline" href="https://wa.me/918870002272" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <div class="hero-note">CREATIVE · UNIQUE · ELEGANT</div>
+      </div>
+      <div class="hero-art" aria-label="Decorative gold design">
+        <div class="art-ring ring-one"></div>
+        <div class="art-ring ring-two"></div>
+        <div class="art-center"><span>RAD</span><small>UNIQUE DESIGN</small></div>
+        <span class="art-star star-one">✦</span>
+        <span class="art-star star-two">✧</span>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <span class="eyebrow">OUR STORY</span>
+        <h2>Designed with <span>passion</span></h2>
+        <p>We believe every design should feel special. Discover our work and contact us to discuss your requirements.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="feature-icon">✧</span>
+          <h3>Unique Creativity</h3>
+          <p>Thoughtful designs with attention to detail.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-icon">◇</span>
+          <h3>Personal Touch</h3>
+          <p>Tell us your idea and discuss your preferences with us.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-icon">✦</span>
+          <h3>Made with Care</h3>
+          <p>We aim to make every customer interaction special.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading reveal">
+        <span class="eyebrow">OUR WORK</span>
+        <h2>The Design <span>Gallery</span></h2>
+        <p>Explore our work. Contact us to enquire about a design.</p>
+      </div>
+
+      <div class="filter-bar" id="galleryFilters">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Mehndi">Mehndi</button>
+        <button class="filter-btn" data-filter="Bridal">Bridal</button>
+        <button class="filter-btn" data-filter="Design">Design</button>
+        <button class="filter-btn" data-filter="Decoration">Decoration</button>
+        <button class="filter-btn" data-filter="Other">Other</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <p class="empty-state">Loading gallery...</p>
+      </div>
+      <p class="section-footnote" id="galleryMessage">Our selected designs</p>
+    </section>
+
+    <section class="feedback-section section" id="feedback">
+      <div class="feedback-layout">
+        <div class="section-heading left-heading reveal">
+          <span class="eyebrow">YOUR WORDS MATTER</span>
+          <h2>Customer <span>Feedback</span></h2>
+          <p>Share your experience or suggestions with RAD Unique Design. Feedback will be reviewed before appearing publicly.</p>
+          <div class="feedback-quotes" id="approvedFeedback">
+            <p class="empty-state">Loading customer feedback...</p>
+          </div>
+        </div>
+
+        <form class="feedback-form reveal" id="feedbackForm">
+          <h3>Leave your feedback</h3>
+          <label for="feedbackName">Your name</label>
+          <input id="feedbackName" name="name" maxlength="60" required placeholder="Enter your name" autocomplete="name">
+
+          <label for="feedbackText">Your feedback</label>
+          <textarea id="feedbackText" name="message" minlength="5" maxlength="1000" required placeholder="Write your feedback here..." rows="5"></textarea>
+
+          <button class="btn btn-gold full-btn" type="submit">Submit Feedback</button>
+          <p class="form-status" id="feedbackStatus" role="status"></p>
+          <p class="privacy-note">Your feedback is submitted for review before public display.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="section-heading reveal">
+        <span class="eyebrow">LET'S CONNECT</span>
+        <h2>Let's create something <span>special</span></h2>
+        <p>Have an idea or question? Send us a WhatsApp enquiry.</p>
+      </div>
+
+      <form class="contact-form reveal" id="enquiryForm">
+        <div class="form-row">
+          <div>
+            <label for="customerName">Your name</label>
+            <input id="customerName" name="name" required maxlength="80" placeholder="Your name">
+          </div>
+          <div>
+            <label for="customerPhone">Phone number</label>
+            <input id="customerPhone" name="phone" required maxlength="20" inputmode="tel" placeholder="Your phone number">
+          </div>
+        </div>
+        <label for="serviceType">What are you looking for?</label>
+        <select id="serviceType" name="service" required>
+          <option value="">Select a category</option>
+          <option>Mehndi</option>
+          <option>Bridal</option>
+          <option>Design</option>
+          <option>Decoration</option>
+          <option>Other</option>
+        </select>
+        <label for="enquiryMessage">Tell us more</label>
+        <textarea id="enquiryMessage" name="message" rows="4" required maxlength="1000" placeholder="Describe your requirements"></textarea>
+        <button class="btn btn-gold full-btn" type="submit">Send Enquiry on WhatsApp</button>
+      </form>
+
+      <div class="contact-details">
+        <div><span>VISIT US</span><p>Creation Valencia, Navalur,<br>Chennai – 600 130, Tamil Nadu</p></div>
+        <div><span>CALL / WHATSAPP</span><p><a href="https://wa.me/910321654987" target="_blank" rel="noopener">+91 0321654987</a></p></div>
+        <div><span>INSTAGRAM</span><p><a href="https://www.instagram.com/Rad_uniquedesign/" target="_blank" rel="noopener">@Rad_uniquedesign</a></p></div>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          title="Map showing Navalur, Chennai"
+          src="https://www.google.com/maps?q=Creation%20Valencia%2C%20Navalur%2C%20Chennai%20600130&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="hours-note">Please contact us to confirm availability and business hours.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">RAD</span>
+      <span class="brand-name">UNIQUE DESIGN<small>CREATIVITY WITH ELEGANCE</small></span>
+    </a>
+    <p>© <span id="year"></span> RAD Unique Design. All rights reserved.</p>
+    <a href="https://www.instagram.com/Rad_uniquedesign/" target="_blank" rel="noopener">Instagram ↗</a>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/910321654987" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">☏</a>
+
+  <!-- Admin login and dashboard -->
+  <dialog class="admin-dialog" id="adminDialog">
+    <div class="admin-header">
+      <div><span class="eyebrow">PRIVATE ACCESS</span><h2>Website Admin</h2></div>
+      <button type="button" class="close-dialog" id="closeAdmin" aria-label="Close">×</button>
+    </div>
+
+    <form id="adminLoginForm">
+      <label for="adminEmail">Admin email</label>
+      <input id="adminEmail" type="email" autocomplete="username" required placeholder="Admin email">
+      <label for="adminPassword">Password</label>
+      <input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Password">
+      <button class="btn btn-gold full-btn" type="submit">Secure Login</button>
+      <p class="form-status" id="adminStatus" role="status"></p>
+    </form>
+
+    <div class="admin-dashboard hidden" id="adminDashboard">
+      <div class="admin-welcome"><h3>Manage your website</h3><button class="btn btn-outline" id="logoutAdmin" type="button">Log out</button></div>
+
+      <h3>Upload a gallery photo</h3>
+      <form id="photoUploadForm">
+        <label for="photoTitle">Photo title</label>
+        <input id="photoTitle" maxlength="100" placeholder="Design title" required>
+        <label for="photoCategory">Category</label>
+        <select id="photoCategory" required>
+          <option>Mehndi</option><option>Bridal</option><option>Design</option><option>Decoration</option><option>Other</option>
+        </select>
+        <label for="photoFile">Choose image</label>
+        <input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp" required>
+        <button class="btn btn-gold full-btn" type="submit">Upload Photo</button>
+        <p class="form-status" id="uploadStatus" role="status"></p>
+      </form>
+
+      <h3>Pending feedback</h3>
+      <div id="pendingFeedback"><p class="empty-state">Log in to view feedback.</p></div>
+      <h3>Manage gallery</h3>
+      <div id="adminGallery"><p class="empty-state">Log in to manage photos.</p></div>
+    </div>
+  </dialog>
+</body>
+</html>
